@@ -6,12 +6,13 @@ import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
 import Button from '@mui/material/Button';
 // image
-import Logo from '@/assets/logo.jpg';
+import Logo from '@/assets/logo.png';
 import Image from 'next/image';
 import { IconButton, Stack } from '@mui/material';
 // icon
 import FacebookIcon from '@mui/icons-material/Facebook';
 import Link from 'next/link';
+import Header from './Header';
 const navItems = [
   {
     route: 'Home',
@@ -42,11 +43,13 @@ const navItems = [
 function Navbar() {
 
   return (
+    <>
+    <Header></Header>
     <AppBar position="static" className='bg-black'>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
 
-          <Image src={Logo} width={100} height={100} alt='news logo' />
+          <Image src={Logo} width={101} height={101} alt='news logo' />
           <Box className="w-full text-center">
             {navItems.map((item) => (
               <Link key={item} href={item.pathname}>
@@ -81,6 +84,7 @@ function Navbar() {
         </Toolbar>
       </Container>
     </AppBar>
+    </>
   );
 }
 export default Navbar;
