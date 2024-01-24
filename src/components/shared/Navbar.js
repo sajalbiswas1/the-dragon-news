@@ -4,7 +4,6 @@ import AppBar from '@mui/material/AppBar';
 import Box from '@mui/material/Box';
 import Toolbar from '@mui/material/Toolbar';
 import Container from '@mui/material/Container';
-import Button from '@mui/material/Button';
 // image
 import Logo from '@/assets/logo.png';
 import Image from 'next/image';
@@ -24,7 +23,7 @@ const navItems = [
   },
   {
     route: 'Category',
-    pathname: '/category',
+    pathname: '/categories/news?category=all-news',
   },
   {
     route: 'News',
